@@ -1,0 +1,14 @@
+##创建数据库git
+create database git;
+
+##创建前台用户表
+create table f_user(
+	user_id tinyint(3) unsigned primary key auto_increment,
+	user_name char(20) not null default '',
+	user_pwd char(20) not null default '',
+	user_pub varchar(500) not null default ''
+)engine = innodb auto_increment=0 charset=utf8;
+
+
+//公钥大概长度
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6fkaSymZgHHrpCcpZTMw3B6CG1WLIDrqs4GhS5IcqSOr3Xu5s0ZBpLQc1gK6J1wuVMF9DElFabc6Ttm8jV+8mwhhhMlWe1hROEu7XgDao4BlJWjD28EmxQJTqgBvw/nmNQbckNlb1QaW3lAmHS78d5u/SaCB9DRn5k0uw+ncIa+/Vd/RKXZDbSsZCSUO6qoYkoNKLgD1jq9WqDaKJiVWs4QlYgAqfjwYtbNgLrOuuSiN6aip/KzjYgfqlrGhNWE07yTuAb86GXtoQyTX0e9XJio/dmDMPrNq+Wo1+/wOz0JjEkRdvyqQrmZvrVax7I630AhdSO9k5QLersW5EVVeT 1192190875@qq.com

@@ -1,0 +1,528 @@
+/* 自定义样式表 */
+@import url("reset.css"); /* 样式表导入 */
+
+/* 其他 */
+body{
+	background-color: #f1f1f1;
+}
+.container{
+	max-width: 960px;
+	margin: 0 auto; /* 相对父元素水平居中，前提设置宽高度 */
+}
+.add-color{
+	color: #e43660;
+}
+.nav-icon{
+	height: 100%;
+	vertical-align: middle; /* 主要针对图片相对父元素垂直对齐 */
+}
+
+/* 头部导航 */
+header{
+	width: 100%;
+	height: 4.5em;
+	background-color: white;
+	position: fixed; /* position设为fixed表示元素相对于可视区域定位 */
+	top: 0;
+	z-index: 10; /* 优先级设为10(可以是大于0的数值)，使header浮动于最上层 */
+}
+header .container{
+	height: 2.5em;
+	padding: 1em 2.5%;
+	line-height: 2.5em; /* line-height设置height一样的数值可以使文本垂直对齐 */
+}
+.logo{
+	height: 100%;
+	width: 10%;
+	float: left;
+}
+.header-options{
+	height: 100%;
+	width: 87%;
+	float: right;
+}
+.nav-base li img{
+	display: none;
+}
+.header-options li{
+	margin-right: 5%;
+	float: left;
+}
+.header-options li:last-child{
+	margin: 0;
+}
+.header-options li.active a{
+	color: #e43660;
+}
+.header-search{
+	width: 35%;
+}
+.search-form{
+	height: 2em;
+	width: 90%;
+	float: right;
+	border: 0.1em solid rgba(200, 200, 200, 0.5); /* rgba在rgb基础上添加透明度的设置 */
+	line-height: 2em;
+}
+.search-content{
+	width: 70%;
+	height: 100%;
+	border: 0;
+	display: block; /* 转换为块元素 */
+	padding-left: 5%;
+	color: rgba(0, 0, 0, 0.75);
+	float: left;
+}
+.search-icon{
+	width: 30px;
+	height: 30px;
+	float: right;
+}
+
+main.container{
+	height: 100%;
+	margin-top: 5em;
+	position: relative;
+}
+.aside-nav,
+.content-part{
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); /* 阴影 */
+}
+
+/* 导航(左侧) */
+.aside-nav{
+	width: 150px;
+	position: fixed;
+}
+.aside-nav li{
+	width: 80%;
+	height: 30px;
+	line-height: 30px;
+	padding: 15px 10%;
+	color: #666;
+	background-color: white;
+	cursor: pointer;
+}
+.aside-nav li:hover{
+	color: #e43660;
+}
+.nav-images{
+	width: 30px;
+	height: 29px;
+	margin-right: 10px;
+	background: url("../images/nav_icons.png") no-repeat #666;
+	float: left;
+}
+.aside-nav li:hover .nav-images{
+	background-color: #e43660;
+}
+
+/* 中心栏主要内容 */
+.main{
+	width: 540px;
+	margin-left: 160px;
+	margin-right: 10px;
+	float: left;
+}
+.content-part{
+	width: 100%;
+	margin-bottom: 15px;
+	background-color: white;
+}
+.content-header{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #eee;
+}
+.content-header-title{
+	font-size: 1em;
+	margin-left: 1em;
+	float: left;
+}
+.content-header-more{
+	font-size: 0.9em;
+	margin-right: 1em;
+	float: right;
+}
+.content-list{
+	width: 100%;
+}
+.content-list li{
+	height: 70px;
+	padding: 2%;
+	border-bottom: 1px solid #eee;
+}
+.content-list-img{
+	height: 100%;
+	float: left;
+	margin-right: 5%;
+}
+.content-list-tag{
+	margin-top: 5px;
+	font-size: 0.9em;
+}
+.content-list-tag img{
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+.content-list-tag .num{
+	color: #37C700;	
+}
+.content-list-tag .author{
+	margin-left: 1.5em;
+	color: #aaa;
+}
+
+/* 推广A */
+.ad{
+	width: 97%;
+	padding: 1.5%;
+	position: relative; /* position设为relative表示元素相对于文档流中元素原位置定位 */
+}
+.ad-box{
+	height: 120px;
+	line-height: 120px;
+	border: 1px solid #e43660;
+}
+.ad-title{
+	font-weight: bold;
+	float: left;
+	margin: 0 2%;
+}
+.ad-content{
+	height: 100px;
+	float: left;
+	list-style: initial;
+	padding: 10px 1.5em;
+}
+.ad-content li{
+	height: 25px;
+	line-height: 25px;
+	font-size: 0.75em;
+}
+.register-btn{
+	padding: 0.3em 0.8em;
+	background-color: white;
+	border: 1px solid #e43660;
+	color: #e43660;
+	font-size: 0.8em;
+	cursor: pointer; /* 鼠标样式设置为手指光标 */
+	position: absolute; /* position设为absolute表示元素相对上一个设置position不为static的元素定位， 这里相对的是.ad元素 */
+	top: 55px;
+	right: 2em;
+}
+
+/* 推广B(右侧) */
+.aside-other{
+	width: 250px;
+	color: #666;
+	float: right;
+}
+.aside-other li{
+	background-color: white;
+}
+.aside-other-title{
+	padding: 30px 30px 20px 30px; /* 上 右 下 左 */
+	font-weight: bold;
+	font-size: 0.9em;
+	border-bottom: 1px solid #eee;
+	color: #000;
+}
+
+.logIn-list{
+	padding: 10px 0;
+	text-align: center;
+}
+.logIn-list button{
+	height: 40px;
+	width: 80%;
+	margin: 5px auto;
+	line-height: 40px;
+	/* background-color: #e43660; */
+	border-radius: 2px;
+	border: 0;
+	color: white;
+}
+.logIn-list button img{
+	vertical-align: middle;
+}
+.logIn-list button span{
+	margin-left: 0.1em;
+}
+.logIn-list figure{
+	width: 100%;
+	text-align: center;
+	margin-top: 0.5em;
+	border-bottom: 1px solid #eee;
+}
+.logIn-list figure span{
+	font-size: 0.75em;
+	color: #9FAAB7;
+}
+.logIn-list figure img{
+	width: 70%;
+	max-width: 200px;
+	margin: 0.5em 0;
+}
+
+.articles-list,
+.user-list{
+	width: 95%;
+	padding: 10px 2.5% 15px 2.5%;
+	display: flex; /* flex盒布局 */
+	flex-wrap: wrap; /* 盒布局默认水平自动填充元素 */
+}
+.articles-list li{
+	width: 45%;
+	float: left;
+	padding-left: 5%;
+}
+.list-title{
+	width: 95%;
+	height: 50px;
+	padding: 0.25em 2.5%;
+	margin-bottom: 1em;
+	line-height: 50px;
+	font-size: 0.85em;
+	border-bottom: 1px solid #eee;
+	text-align: left;
+	color: #000;
+}
+.tag-btn{
+	border: 0;
+	background-color: #eee;
+	padding: 0.3em 0.5em;
+	margin: 0.5em 0;
+	border-radius: 2em 2em;
+	font-size: 0.75em;
+}
+.tag-btn:hover{
+	background-color: #41c134;
+	color: white;
+}
+.expend{
+	color: #41c134;
+}
+.tag-btn:hover .expend{
+	color: white;
+}
+
+.user-list li{
+	width: 100%;
+	height: 50px;
+	font-size: 0.8em;
+	padding: 0 0.1em;
+}
+.user-list li img{
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+	float: left;
+}
+.user-info{
+	float: left;
+}
+.user-list .expend{
+	float: right;
+	margin-right: 0.5em;
+	z-index: 5;
+}
+
+.translate{
+	width: 90%;
+	padding: 0.8em 5%;
+}
+.translate img{
+	height: 25px;
+	vertical-align: middle;
+}
+
+.content-part.footer{
+	height: 100px;
+	background-color: #f1f1f1;
+	color: #666;
+	box-shadow: 0 0;
+}
+.content-part.footer .list-title{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 0;
+	color: #666;
+}
+.contract-list{
+	width: 60%;
+	height: 20px;
+	margin: 0 auto;
+}
+.contract-list li{
+	width: 25%;
+	height: 100%;
+	text-align: center;
+	float: left;
+	background-color: transparent;
+}
+.contract-list li img{
+	height: 100%; 
+}
+.footer-other{
+	text-align: center;
+	padding-top: 1em;
+	font-size: 0.9em;
+	line-height: 2em;
+}
+
+
+/* 媒体查询 */
+@media(max-width: 960px) and (min-width: 600px) { /* 屏幕宽度小于960px时修改的样式 */
+	.container{
+		font-size: 0.9em;
+	}
+
+	.header-options{
+		width: 80%;
+		text-align: right;
+	}
+	.header-options li{
+		margin-right: 2%;
+	}
+	.header-search{
+		width: 30%;
+	}
+	
+	main.container{
+		border-top: 5px solid #eee;
+	}
+	.aside-nav{
+		width: 20%;
+	}
+	.main{
+		width: 50%;
+		position: absolute;
+		z-index: 5;
+		border-right: 5px solid #eee;
+		border-left: 5px solid #eee;
+		margin-left: 20%;
+		margin-right: 0;
+	}
+	.aside-other{
+		width: 29%;
+	}
+	
+	.content-list li{
+		height: 80px;
+		font-size: 0.9em;
+	}
+	
+	.ad-box{
+		line-height: 0;
+	}
+	.ad-title{
+		height: 20px;
+		line-height: 20px;
+		margin: 8px 2%;
+	}
+	.ad-content{
+		height: auto;
+		padding: 0 1.5em;
+	}
+	.ad-content li{
+		height: auto;
+		line-height: initial;
+		margin-bottom: 5px;
+	}
+	
+	.content-part.footer{
+		font-size: 0.9em;
+	}
+}
+
+@media(max-width: 600px) { /* 屏幕宽度小于600px时修改的样式 */
+	.container{
+		font-size: 1.1em;
+	}
+
+	header{
+		height: 60px;
+	}
+	header .container{
+		padding-top: 0;
+		padding-bottom: 0;
+		height: 100%;
+	}
+	.logo{
+		width: 29%;
+	}
+	.header-options{
+		width: 70%;
+	}
+	.header-options li{
+		height: 60px;
+		line-height: 60px;
+		display: none;
+		font-size: 0.9em;
+	}
+	.nav-base{
+		width: 100px;
+		text-align: left;
+		background-color: white;
+	}
+	.nav-base li{
+		width: 75%;
+		padding-left: 25%;
+	}
+	.nav-base li:first-child{
+		display: block;
+	}
+	.nav-base li img{
+		vertical-align: middle;
+		margin-left: 5px;
+		display: inline;
+	}
+	.header-options li.logIn-register{
+		display: block;
+		float: right;
+	}
+	
+	main.container{
+		border: 0;
+		position: absolute;
+		border: 0;
+		top: -30px;
+	}
+	
+	.aside-nav{
+		display: none;
+	}
+	.aside-other,.main{
+		width: 90%;
+		height: 1200px;
+		margin: 15px auto;
+		float: initial;
+	}
+	.aside-other{
+	 position: absolute;
+	 top: 10px;
+	 left: 5%;
+	}
+	.main{
+		height: auto;
+		position: static;
+		margin: 1300px 5% 10px 5%;
+	}
+
+	.content-list-img{
+	 display: none;
+	}
+	.ad{
+	 display: none;
+	}
+	.content-part{
+	 font-size: 0.9em;
+	}
+	.content-list li{
+	 padding: 1em;
+	}
+}

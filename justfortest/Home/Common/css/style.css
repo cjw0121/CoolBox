@@ -1,0 +1,50 @@
+@import url('./reset.css');
+
+a{
+	margin: 2em;
+	font-size: 1.2em;
+	display: block;
+}
+a:hover{
+	color: #3456c1;
+}
+
+/* 临时表单 */
+.temp-form{
+	max-width: 500px;
+	margin: 2em auto;
+	background-color: #fff;
+	box-shadow: 0 0 2px 2px #ddd;
+	font-size: 1.2em;
+	text-align: center;
+	padding-bottom: 3em;
+}
+.temp-form h1{
+	height: 5em;
+	line-height: 5em;
+	text-align: center;
+	font-size: 1.3em;
+	color: #3456c1;
+}
+.temp-form p{
+	margin: 1em 0;
+	font-size: 0.9em;
+}
+.temp-form .btn-line{
+	height: 3em;
+	padding: 2em 6em 0 6em;
+}
+.change-btn,
+.submit-btn{
+	width: 45%;
+	text-align: center;
+}
+.change-btn{
+	float: left;
+}
+.submit-btn{
+	float: right;
+}
+#register-form{
+	display: none;
+}
