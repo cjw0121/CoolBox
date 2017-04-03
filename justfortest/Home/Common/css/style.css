@@ -1,12 +1,78 @@
 @import url('./reset.css');
 
-a{
-	margin: 2em;
-	font-size: 1.2em;
-	display: block;
+/* 主体样式 */
+.container{
+	max-width: 960px;
+	height: 100%;
+	margin: 0px auto;
 }
-a:hover{
-	color: #3456c1;
+
+/* 头部样式 */
+#header{
+	width: 100%;
+	height: 100px;
+	background-color: #0e66c3;
+	position: fixed;
+	top: 0;
+}
+#header .container{
+	background-color: #0063bc;
+	box-shadow: 0 0 15px 0 #333;
+}
+.logo{
+	width: 150px;
+	height: 100px;
+	margin-left: 20px;
+	float: left;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+}
+.nav{
+	width: 790px;
+	height: 100px;
+	float: right;
+	text-align: center;
+	line-height: 100px;
+}
+.nav li,
+.nav li a,
+#footer a{
+	color: white;
+}
+.nav li{
+	width: 100px;
+	float: left;
+}
+.nav li:last-child{
+	margin-right: 20px;
+	float: right;
+}
+.nav li a:hover,
+#footer a:hover{
+	color: #b3e318;
+}
+
+/* 内容样式 */
+#content{
+	width: 960px;
+	height: 900px;
+	margin: 120px auto 20px auto;
+	text-align: center;
+	box-shadow: 0 0 10px 0 #666;
+}
+
+/* 底部样式 */
+#footer{
+	width: 960px;
+	height: 100px;
+	line-height: 100px;
+	background-color: #0063bc;
+	color: white;
+	text-align: center;
+	word-spacing: 50px;
+	box-shadow: 0 0 10px 0 #666;
 }
 
 /* 临时表单 */
@@ -48,3 +114,4 @@ a:hover{
 #register-form{
 	display: none;
 }
+

@@ -6,10 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="keywords" content="">
     <meta name="description" content=""> 
-    <title></title>
+    <title>CoolBox_主页</title>
     <link rel="stylesheet" href="<?php echo HOME_CSS_URL;?>/style.css" type="text/css" />
 </head>
 <body>
-	<a href="__MODULE__/user/register"> 注册  </a>
+	<div id="main">
+		<div id="header">
+			<div class="container">
+				<figure class="logo">
+					<img src="<?php echo HOME_IMAGES_URL;?>/logo.png" />
+				</figure>
+				<ul class="nav">
+					<li><a href="a.html">主页</a></li>
+					<li><a href="b.html">个人空间</a></li>
+					<li><a href="c.html">关于</a></li>
+					<li><a href="__MODULE__/user/register">登录/注册</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="content" class="container">
+		</div>
+		
+		<div id="footer" class="container">
+			<span>©版权所有及技术支持：Web联盟</span> 
+			<a href="1.html">网站首页</a> <a href="2.html">管理入口</a>
+		</div>
+	</div>
 </body>
 </html>
