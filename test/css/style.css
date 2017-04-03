@@ -1,0 +1,119 @@
+@import url('./reset.css');
+
+/* 主体样式 */
+.container{
+	max-width: 960px;
+	height: 100%;
+	margin: 0px auto;
+}
+
+/* 头部样式 */
+#header{
+	width: 100%;
+	height: 100px;
+	background-color: #0e66c3;
+	position: fixed;
+	top: 0;
+}
+#header .container{
+	background-color: #0063bc;
+	box-shadow: 0 0 15px 0 #333;
+}
+.logo{
+	width: 150px;
+	height: 100px;
+	margin-left: 1em;
+	float: left;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+}
+.nav{
+	width: 790px;
+	height: 100px;
+	float: right;
+	text-align: center;
+	line-height: 100px;
+}
+.nav li,
+.nav li a,
+#footer a{
+	color: white;
+}
+.nav li{
+	width: 5em;
+	float: left;
+}
+.nav li:last-child{
+	margin-right: 2em;
+	float: right;
+}
+.nav li a:hover,
+#footer a:hover{
+	color: #b3e318;
+}
+
+/* 内容样式 */
+#content{
+	width: 900px;
+	min-height: 450px;
+	margin: 120px auto 20px auto;
+	padding: 30px;
+	text-align: center;
+	box-shadow: 0 0 10px 0 #666;
+	background-color: white;
+}
+
+/* 底部样式 */
+#footer{
+	height: 130px;
+	line-height: 130px;
+	font-size: 0.8em;
+	background-color: #0063bc;
+	color: white;
+	text-align: center;
+	word-spacing: 2em;
+	box-shadow: 0 0 10px 0 #666;
+}
+
+/* 临时表单 */
+.temp-form{
+	max-width: 500px;
+	margin: 2em auto;
+	background-color: #fff;
+	box-shadow: 0 0 2px 2px #ddd;
+	font-size: 1.2em;
+	text-align: center;
+	padding-bottom: 3em;
+}
+.temp-form h1{
+	height: 5em;
+	line-height: 5em;
+	text-align: center;
+	font-size: 1.3em;
+	color: #3456c1;
+}
+.temp-form p{
+	margin: 1em 0;
+	font-size: 0.9em;
+}
+.temp-form .btn-line{
+	height: 3em;
+	padding: 2em 6em 0 6em;
+}
+.change-btn,
+.submit-btn{
+	width: 45%;
+	text-align: center;
+}
+.change-btn{
+	float: left;
+}
+.submit-btn{
+	float: right;
+}
+#register-form{
+	display: none;
+}
+

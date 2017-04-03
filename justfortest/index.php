@@ -17,7 +17,7 @@ define('HOME_IMAGES_URL',"/justfortest/Home/Common/images");
 */
 
 //配置开发模式
-define('APP_DEBUG',true);
+define('APP_DEBUG',TRUE);
 
 //引入入口文件
 require('../ThinkPHP/ThinkPHP.php');

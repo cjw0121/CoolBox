@@ -1,0 +1,70 @@
+/* 通用样式表 */
+
+/* 引入字体包 */
+@font-face{
+	font-family: "Kelson Sans Regular";
+	src: url("../font/Kelson_Sans_Regular.otf");
+}
+
+html,body{
+	width: 100%;
+	font-size: 18px;
+	font-family: "Kelson Sans Regular";
+	background-color: #eee;
+}
+*{
+	margin: 0;
+	padding: 0;
+	word-break: break-all;
+}
+ul,ol{
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+
+h1{
+	font-size: 4em;
+}
+h2{
+	font-size: 3.5em;
+}
+h3{
+	font-size: 3em;
+}
+h4{
+	font-size: 2.5em;
+}
+h5{
+	font-size: 2em;
+}
+h6{
+	font-size: 1.5em;
+}
+
+input[type="text"],
+input[type="password"],
+textarea{
+	height: 1.7em;
+	width: 15em;
+	max-width: 200px;
+	padding: 2px;
+	vertical-align: middle;
+	border: 1px solid #aaa;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"]{
+	padding: 0.3em 0.5em;
+	background-color: white;
+	color: #3456c1;
+	border: 1px solid #3456c1;
+	border-radius: 0.5em 0.5em;
+}
+
+textarea{
+	height: 10em;
+	resize: none;
+}
