@@ -98,7 +98,8 @@
 }
 .form .warn-text{
 	color: #e43660;
-	font-size: 0.7em;
+	font-size: 0.8em;
+	font-weight: bold;
 }
 .form .btn-line{
 	height: 3em;
@@ -129,7 +130,7 @@
 
 
 /* 媒体查询 */
-@media(max-width: 960px) and (min-width: 500px) {
+@media(max-width: 960px) {
 	html{
 		height: 100%;
 	}
@@ -164,7 +165,6 @@
 		float: right;
 		background-color: #0063bc;
 		text-align: center;
-		font-size: 0.8em;
 	}
 	#nav-option{
 		display: none;
@@ -198,11 +198,21 @@
 		padding: 0;
 	}
 
-
 	.form{
 		width: 100%;
 		min-height: 450px;
 		margin: 0;
 		padding: 3em 0;
+	}
+	.form .btn-line{
+		padding: 2em;
+	}
+	.btn-line .change-btn,
+	.btn-line .submit-btn{
+		height: 3em;
+	}
+	
+	#footer{
+		word-spacing: 1em;
 	}
 }
