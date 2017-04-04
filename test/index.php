@@ -12,26 +12,36 @@
 <body>
 	<div id="main">
 		<div id="header">
-			<div class="container">
-				<figure class="logo">
-					<img src="./images/logo.png" />
-				</figure>
-				<ul class="nav">
-					<li><a href="./index.php">主页</a></li>
-					<li><a href="b.html">个人空间</a></li>
-					<li><a href="c.html">关于</a></li>
-					<li><a href="./register.php">登录/注册</a></li>
-				</ul>
-			</div>
+			<ul class="nav container">
+				<li>
+					<figure class="logo">
+						<img src="./images/logo.png" />
+					</figure>
+				</li>
+				<div class="nav-list">
+					<figure id="nav-list-btn">
+						<img src="./images/navbtn.png" />
+					</figure>
+					<div id="nav-option">
+						<li><a href="./index.php">主页</a></li>
+						<li><a href="#">个人空间</a></li>
+						<li><a href="#">关于</a></li>
+						<li><a href="./register.php">登录/注册</a></li>
+					</div>
+				</div>
+			</ul>
 		</div>
 		
-		<div id="content" class="container">
+		<div id="content" class="container">		
 		</div>
 		
 		<div id="footer" class="container">
 			<span>©版权所有及技术支持：Web联盟</span> 
-			<a href="1.html">网站首页</a> <a href="2.html">管理入口</a>
+			<a href="./index.php">网站首页</a> <a href="#">管理入口</a>
 		</div>
 	</div>
+	
+	<script src="./js/jquery-1.12.3.min.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 </html>
