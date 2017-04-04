@@ -42,8 +42,8 @@
 					<label for="user-psw">密码：</label><input id="login-psw" name="user_pwd" type="password" />
 				</p>
 				<p class="btn-line">
-					<input class="change-btn" type="button" value="注册" />
-					<input class="submit-btn" type="submit" value="提交" />
+					<input class="change-btn" type="button" value="切换注册" />
+					<input class="submit-btn" type="submit" value="确定" />
 				</p>
 			</form>
 			
@@ -59,7 +59,7 @@
 					<label for="user-psw">邮箱：</label><input id="register-email" name="user_email" type="text" />
 				</p>
 				<p class="btn-line">
-					<input class="change-btn" type="button" value="登录" />
+					<input class="change-btn" type="button" value="切换登录" />
 					<input class="submit-btn" type="submit" value="提交" />
 				</p>
 			</form>

@@ -66,7 +66,7 @@ $(function() {
 				}
 		   };
 	
-	layoutObj.setForm(["注册", "登录"]);
+	layoutObj.setForm(["切换注册", "切换登录"]);
 	
 	$logInForm.submit(function() {
 		if (!layoutObj.judgeEmpty([$('#login-id'), $('#login-psw')], warningHandle, '填写信息不能为空！'))
