@@ -67,7 +67,7 @@
 		</div>
 		
 		<div id="footer" class="container">
-			<span>©版权所有及技术支持：Web联盟</span> 
+			<span>©版权所有及技术支持：Web联盟</span><br/>
 			<a href="./index.php">网站首页</a> <a href="#">管理入口</a>
 		</div>
 	</div>

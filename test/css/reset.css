@@ -6,11 +6,12 @@
 	src: url("../font/Kelson_Sans_Regular.otf");
 }
 
-html,body{
+html,
+body{
 	width: 100%;
 	font-size: 18px;
 	font-family: "Kelson Sans Regular";
-	background-color: #eee;
+	background-color: #ddd;
 }
 *{
 	margin: 0;

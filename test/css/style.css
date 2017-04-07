@@ -11,7 +11,6 @@
 #header{
 	width: 100%;
 	height: 100px;
-	background-color: #0e66c3;
 	position: fixed;
 	top: 0;
 }
@@ -32,8 +31,7 @@
 	box-shadow: 0 0 15px 0 #333;
 }
 .nav li,
-.nav li a,
-#footer a{
+.nav li a{
 	color: white;
 }
 .nav li{
@@ -59,14 +57,14 @@
 	margin: 100px auto 0 auto;
 	padding: 30px;
 	text-align: center;
-	box-shadow: 0 0 10px 0 #666;
+	box-shadow: 0 0 15px 0 #aaa;
 	background-color: white;
 }
 
 /* 底部样式 */
 #footer{
-	height: 130px;
-	line-height: 130px;
+	padding: 50px 0;
+	line-height: 2em;
 	font-size: 0.8em;
 	background-color: #0063bc;
 	color: white;
@@ -74,8 +72,11 @@
 	word-spacing: 2em;
 	box-shadow: 0 0 10px 0 #666;
 }
+#footer a{
+	color: #f0f271;
+}
 
-/* 临时表单 */
+/* 注册登录表单 */
 .form{
 	max-width: 500px;
 	margin: 2em auto;
@@ -128,6 +129,45 @@
 	display: none;
 }
 
+/* 主页内容项 */
+.project-item{
+	width: 80%;
+	min-width: 750px;
+	margin: 0px auto;
+}
+.project-title,
+.project-main{
+	margin-bottom: 0.5em;
+	padding: 1em;
+	border: 0.2em solid #848484;	
+	text-align: left;
+}
+.project-title,
+.project-main-title{
+	font-weight: bold;
+	margin: 0.5em auto;
+	color: #0063bc;
+}
+.project-title a{
+	color: #0063bc;
+}
+.project-title a:hover{
+	color: #00a4e9;
+}
+.project-description{
+	font-size: 0.9em;
+	margin: 1.5em auto;
+}
+.project-message{
+	font-size: 0.8em;
+	text-align: right;
+	padding-right: 0.5em;
+}
+.message-item{
+	margin-left: 2em;
+}
+
+/****************************************************************************************/
 
 /* 媒体查询 */
 @media(max-width: 960px) {
@@ -211,7 +251,7 @@
 	.btn-line .submit-btn{
 		height: 3em;
 	}
-	
+
 	#footer{
 		word-spacing: 1em;
 	}
