@@ -19,9 +19,7 @@
 					</figure>
 				</li>
 				<div class="nav-list">
-					<figure id="nav-list-btn">
-						<img src="./images/navbtn.png" />
-					</figure>
+					<span id="nav-list-btn" class="icon-align-justify"></span>
 					<div id="nav-option">
 						<li><a href="./index.php">主页</a></li>
 						<li><a href="#">个人空间</a></li>
@@ -36,6 +34,7 @@
 			<li class="project-item">
 				<div class="project-title">
 					<a href=""><span>掘金主页克隆修改版</span></a>
+					<span class="right icon-sort-down project-item-btn"></span>
 				</div>
 				<div class="project-main">
 					<p class="project-main-title">项目描述</p>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8" />
@@ -26,14 +26,14 @@
 						<li><a href="/">主页</a></li>
 						<li><a href="#">个人空间</a></li>
 						<li><a href="#">关于</a></li>
-						<li><a href="__MODULE__/user/register">登录/注册</a></li>
+						<li><a href="/MyGitHub/CoolBox/justfortest/index.php/Home/user/register">登录/注册</a></li>
 					</div>
 				</div>
 			</ul>
 		</div>
 		
 		<div id="content" class="container">
-			<form class="form" id="login-form" action="__MODULE__/user/login" method="POST">
+			<form class="form" id="login-form" action="/MyGitHub/CoolBox/justfortest/index.php/Home/user/login" method="POST">
 				<h1>登录</h1>
 				<p>
 					<label for="user-id">账号：</label><input id="login-id" name="user_name" type="text" />
@@ -47,7 +47,7 @@
 				</p>
 			</form>
 			
-			<form class="form" id="register-form" action="__MODULE__/user/register" method="POST">
+			<form class="form" id="register-form" action="/MyGitHub/CoolBox/justfortest/index.php/Home/user/register" method="POST">
 				<h1>注册</h1>
 				<p>
 					<label for="user-id">账号：</label><input id="register-id" name="user_name" type="text" />

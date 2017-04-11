@@ -19,13 +19,11 @@
 					</figure>
 				</li>
 				<div class="nav-list">
-					<figure id="nav-list-btn">
-						<img src="./images/navbtn.png" />
-					</figure>
+					<span id="nav-list-btn" class="icon-align-justify"></span>
 					<div id="nav-option">
 						<li><a href="./index.php">主页</a></li>
-						<li><a href="b.html">个人空间</a></li>
-						<li><a href="c.html">关于</a></li>
+						<li><a href="#">个人空间</a></li>
+						<li><a href="#">关于</a></li>
 						<li><a href="./register.php">登录/注册</a></li>
 					</div>
 				</div>
@@ -33,36 +31,39 @@
 		</div>
 		
 		<div id="content" class="container">
-			<form class="form" id="login-form" action="#login" method="POST">
+
+			<!-- 登录表单 -->
+			<div class="form" id="login-form" action="./getData.php" method="POST">
 				<h1>登录</h1>
 				<p>
-					<label for="user-id">账号：</label><input id="login-id" name="user_name" type="text" />
+					<label for="user-name">账号：</label><input id="login-name" name="login_name" type="text" />
 				</p>
 				<p>
-					<label for="user-psw">密码：</label><input id="login-psw" name="user_pwd" type="password" />
+					<label for="user-psw">密码：</label><input id="login-psw" name="login_psw" type="password" />
 				</p>
 				<p class="btn-line">
 					<input class="change-btn" type="button" value="切换注册" />
-					<input class="submit-btn" type="submit" value="确定" />
+					<input id="login-btn" class="submit-btn" type="button" value="确定" />
 				</p>
-			</form>
+			</div>
 			
-			<form class="form" id="register-form" action="#register" method="POST">
+			<!-- 注册表单 -->
+			<div class="form" id="register-form" action="./getData.php" method="POST">
 				<h1>注册</h1>
 				<p>
-					<label for="user-id">账号：</label><input id="register-id" name="user_name" type="text" />
+					<label for="register-name">账号：</label><input id="register-name" name="register_name" type="text" />
 				</p>
 				<p>
-					<label for="user-psw">密码：</label><input id="register-psw" name="user_pwd" type="password" />
+					<label for="register-psw">密码：</label><input id="register-psw" name="register_psw" type="password" />
 				</p>
 				<p>
-					<label for="user-psw">邮箱：</label><input id="register-email" name="user_email" type="text" />
+					<label for="register-email">邮箱：</label><input id="register-email" name="register_email" type="text" />
 				</p>
 				<p class="btn-line">
 					<input class="change-btn" type="button" value="切换登录" />
-					<input class="submit-btn" type="submit" value="提交" />
+					<input id="register-btn" class="submit-btn" type="button" value="提交" />
 				</p>
-			</form>
+			</div>
 		
 		</div>
 		

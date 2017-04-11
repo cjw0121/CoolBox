@@ -1,3 +1,4 @@
+@import url('./font-awesome.min.css');
 @import url('./reset.css');
 
 /* 主体样式 */
@@ -5,6 +6,9 @@
 	max-width: 960px;
 	height: 100%;
 	margin: 0px auto;
+}
+.right{
+	float: right;
 }
 
 /* 头部样式 */
@@ -99,8 +103,13 @@
 }
 .form .warn-text{
 	color: #e43660;
-	font-size: 0.8em;
+	font-size: 0.75em;
 	font-weight: bold;
+}
+.form .success-text{
+	color: #41c134;
+	font-size: 0.75em;
+	font-weight: bold;	
 }
 .form .btn-line{
 	height: 3em;
@@ -131,21 +140,25 @@
 
 /* 主页内容项 */
 .project-item{
-	width: 80%;
-	min-width: 750px;
+	width: 95%;
+	max-width: 750px;
 	margin: 0px auto;
 }
 .project-title,
 .project-main{
 	margin-bottom: 0.5em;
-	padding: 1em;
+	padding: 1em 0.5em;
 	border: 0.2em solid #848484;	
 	text-align: left;
+}
+.project-main{
+	display: none;
+	border-top: 0;
 }
 .project-title,
 .project-main-title{
 	font-weight: bold;
-	margin: 0.5em auto;
+	margin: 0.5em auto 0 auto;
 	color: #0063bc;
 }
 .project-title a{
@@ -153,6 +166,10 @@
 }
 .project-title a:hover{
 	color: #00a4e9;
+}
+.project-item-btn{
+	padding-right: 0.1em;
+	cursor: pointer;
 }
 .project-description{
 	font-size: 0.9em;
@@ -226,16 +243,15 @@
 	#nav-list-btn{
 		height: 60px;
 		display: block;
-	}
-	#nav-list-btn img{
-		width: 40px;
-		height: 40px;
-		margin: 10px auto;
+		font-size: 2em;
+		text-align: right;
+		padding-right: 0.5em;
+		color: white;
 	}
 
 	#content{
 		margin-top: 60px;
-		padding: 0;
+		padding: 1em 0;
 	}
 
 	.form{
