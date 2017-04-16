@@ -30,24 +30,13 @@
 			</ul>
 		</div>
 
-		<ul id="content" class="container">
-			<li class="project-item">
-				<div class="project-title">
-					<a href=""><span>掘金主页克隆修改版</span></a>
-					<span class="right icon-sort-down project-item-btn"></span>
-				</div>
-				<div class="project-main">
-					<p class="project-main-title">项目描述</p>
-					<div class="project-description">
-						<p>本项目为技术资讯网站——掘金的克隆微改版本，由纯 HTML+CSS 构成，在原页面的基础上修改了部分样式。创建此项目的目的是练习静态页面的构筑，了解网站页面的内部构造。</p>
-					</div>
-					<div class="project-message">
-						<span class="message-item">负责人: <span>魏杰涛</span></span>
-						<span class="message-item">创建日期: <span>2017年3月20日</span></span>
-					</div>
-				</div>
-			</li>
-		</ul>
+		<!-- 内容区 -->
+		<div id="content" class="container">
+			<div class="user-pic">
+				<img src="./images/default_user.png" />
+				<input type="file" value="修改头像" />
+			</div>
+		</div>
 
 		<div id="footer" class="container">
 			<span>©版权所有及技术支持：Web联盟</span><br />

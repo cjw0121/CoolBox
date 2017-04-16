@@ -4,10 +4,10 @@
 		if ($_POST['action'] == 'logIn') { //登录
 			
 			//数据库处理数据
-			$ifSuccess = ($_POST['login_name'] === 'admin' && $_POST['login_psw'] === '000000') ? 1 : 0;
+			$send = ($_POST['login_name'] === 'admin' && $_POST['login_psw'] === '000000') ? array('result' => 'success', 'user' => 'admin', 'id' => 'coolbox001', 'pic' => './images/default_user.png') : array('result' => 'fail');
 			$data = json_encode($_POST); //json格式化数据
 			
-			echo $ifSuccess; //发送结果信息给前台
+			echo json_encode($send); //发送结果信息给前台
 		} else if ($_POST['action'] == 'register') {
 		
 			//数据库处理数据

@@ -21,10 +21,10 @@
 				<div class="nav-list">
 					<span id="nav-list-btn" class="icon-align-justify"></span>
 					<div id="nav-option">
-						<li><a href="./index.php">主页</a></li>
-						<li><a href="#">个人空间</a></li>
-						<li><a href="#">关于</a></li>
-						<li><a href="./register.php">登录/注册</a></li>
+							<li><a href="./index.php">主页</a></li>
+							<li><a href="./center.php">个人空间</a></li>
+							<li><a href="./about.php">关于</a></li>
+							<li id="major-option"><a class="right" href="./register.php">登录/注册</a></li>						
 					</div>
 				</div>
 			</ul>

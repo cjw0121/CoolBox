@@ -1,6 +1,6 @@
 "use strict";
 
-var LayoutObj = function(logInForm, registerForm, changeBtn) {
+var Layout = function(logInForm, registerForm, changeBtn) {
 	var __lf = logInForm,
 			__rf = registerForm,
 			__cb = changeBtn,
@@ -68,9 +68,9 @@ var LayoutObj = function(logInForm, registerForm, changeBtn) {
 			return ifSubmit;
 		},
 		
-		optionDraw: function(b, e) {
-			b.click(function() {
-				e.slideToggle();
+		optionDraw: function(btn, elems) {
+			btn.click(function() {
+				elems.slideToggle();
 			})
 		},
 		
@@ -81,32 +81,66 @@ var LayoutObj = function(logInForm, registerForm, changeBtn) {
 				data: data,
 				success: successFunc
 			});
+		},
+		
+		backHome: function(second, href, msg, addClass) {
+			setInterval((function(msgHandle) {
+				return function() {
+					msgHandle.prompt(msg + ', ' + (second--) + '秒后返回主页', addClass);
+					if (second === 0) {
+						location.href = href;
+					}
+				}
+			})(this.msgHandle), 1000);			
 		}
+
 	}
 };
 
+var Cookie = {
+		setCookie: function(key, value, dayToLive) {	
+			var exp = new Date();
+			exp.setDate(exp.getDate() + dayToLive);
+			document.cookie = key + '=' + encodeURIComponent(value) + ( (dayToLive === null) ? '' : '; expires=' +exp.toGMTString() );
+		},
+		getCookie: 	function(key) {
+			var arr = (decodeURIComponent(document.cookie)).split('; '),
+				eachCookie;
+			for (var i = 0; i < arr.length; i++) {
+				eachCookie = arr[i].split('=');
+				if (eachCookie[0] === key && eachCookie[1] != '') {
+					return eachCookie[1];
+				}
+			}
+		},
+		deleteCookie: function(key) {
+			var exp = new Date();
+			exp.setTime(exp.getTime() - 1);
+			this.setCookie(key, '', exp);
+		}
+}
 
 $(function() {
 	var logInObj = { //登录表单元素集合
-				form: $('#login-form'),
-				sbtBtn: $('#login-btn'),
-				name: $('#login-name'),
-				psw: $('#login-psw')
-			},
-			registerObj = { //注册表单元素集合
-				form: $('#register-form'),
-				sbtBtn: $('#register-btn'),
-				name: $('#register-name'),
-				psw: $('#register-psw'),
-				email: $('#register-email')
-			},
-			layoutObj = new LayoutObj(logInObj.form, registerObj.form, $('.change-btn')); //创建表单控件布局实例对象
-
+			form: $('#login-form'),
+			sbtBtn: $('#login-btn'),
+			name: $('#login-name'),
+			psw: $('#login-psw')
+		},
+		registerObj = { //注册表单元素集合
+			form: $('#register-form'),
+			sbtBtn: $('#register-btn'),
+			name: $('#register-name'),
+			psw: $('#register-psw'),
+			email: $('#register-email')
+		},
+		$navOption = $('#nav-option'),
+		layout = new Layout(logInObj.form, registerObj.form, $('.change-btn')); //创建表单控件布局实例对象
 			
-	layoutObj.setForm(["切换注册", "切换登录"]); //使用表单切换功能
+	layout.setForm(["切换注册", "切换登录"]); //使用表单切换功能
 	
 	logInObj.sbtBtn.click(function() { //登录信息提交按钮响应事件
-		if (!layoutObj.judgeEmpty([logInObj.name, logInObj.psw], '填写信息不能为空！', 'warn-text')) {
+		if (!layout.judgeEmpty([logInObj.name, logInObj.psw], '填写信息不能为空！', 'warn-text')) {
 			return false;
 		} else {
 			
@@ -116,18 +150,27 @@ $(function() {
 			sendData[logInObj.name.attr('name')] = logInObj.name.val();
 			sendData[logInObj.psw.attr('name')] = logInObj.psw.val();
 			
-			layoutObj.ajaxPost(logInObj.form.attr('action'), sendData, function(data, status) {
-				if (data == 1) {
-					layoutObj.msgHandle.prompt('登录成功', 'success-text');
+			//Ajax发送
+			layout.ajaxPost(logInObj.form.attr('action'), sendData, function(data, status) {
+				data = JSON.parse(data);
+				if (data.result == 'success') {
+					//Cookie存储
+					Cookie.setCookie('user', data.user, 31);
+					Cookie.setCookie('id', data.id, 31);
+					Cookie.setCookie('pic', data.pic, 31);
+					Cookie.setCookie('login', 'true', 31);
+
+					//跳转页面
+					layout.backHome(5, $('#nav-option li a:first').attr('href'), '登录成功', 'success-text');					
 				} else {
-					layoutObj.msgHandle.prompt('登录失败', 'warn-text');
+					layout.msgHandle.prompt('登录失败', 'warn-text');
 				}
 			});
 		}
 	});
 	
 	registerObj.sbtBtn.click(function() {
-		if (!layoutObj.judgeEmpty([registerObj.name, registerObj.psw, registerObj.email], '填写信息不能为空！', 'warn-text')) {
+		if (!layout.judgeEmpty([registerObj.name, registerObj.psw, registerObj.email], '填写信息不能为空！', 'warn-text')) {
 			return false;
 		} else {
 			
@@ -138,21 +181,33 @@ $(function() {
 			sendData[registerObj.psw.attr('name')] = registerObj.psw.val();
 			sendData[registerObj.email.attr('name')] = registerObj.email.val();
 			
-			layoutObj.ajaxPost(registerObj.form.attr('action'), sendData, function(data, status) {
+			//Ajax发送
+			layout.ajaxPost(registerObj.form.attr('action'), sendData, function(data, status) {
 				console.log(data);
 				if (data == 1) {
-					layoutObj.msgHandle.prompt('注册成功', 'success-text');
+					layout.backHome(5, $('#nav-option li a:first').attr('href'), '注册成功', 'success-text');
 				} else {
-					layoutObj.msgHandle.prompt('注册失败', 'warn-text');
+					layout.msgHandle.prompt('注册失败', 'warn-text');
 				}
 			});
 		}
 	});
 	
-	layoutObj.optionDraw($('#nav-list-btn'), $('#nav-option')); //导航切换显示
+	layout.optionDraw($('#nav-list-btn'), $navOption); //导航切换显示
 	
+	//主体内容列表点击事件绑定
 	for(var i = 0, $b = $('.project-item-btn'), $o = $('.project-main'); i < $b.length; i++) {
-		layoutObj.optionDraw($b.eq(i), $o.eq(i));		
+		layout.optionDraw($b.eq(i), $o.eq(i));
+	}
+	
+	if (!!Cookie.getCookie('login')) {
+		var $originElems = $navOption.html(),
+			user = Cookie.getCookie('user'),
+			id = Cookie.getCookie('id'),
+			pic = Cookie.getCookie('pic');
+		
+		$navOption.html('<li id="major-option"><span id="user-name">' + user + '</span><figure><img src="' + pic + '" /></figure><ul><li><a href="./index.php">主页</a></li><li><a href="./center.php?userid=' + id + '">个人空间</a></li><li><a href="./about.php">关于</a></li><li id="logout-btn">注销</li></ul></li>');
+		layout.optionDraw($('#major-option figure'), $('#major-option ul')); //用户选项切换显示
 	}
 	
 });
