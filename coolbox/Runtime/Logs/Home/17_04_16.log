@@ -1,0 +1,58 @@
+[ 2017-04-16T22:55:28+08:00 ] 127.0.0.1 /coolbox/coolbox/index.php/Home/Index/index.php
+ERR: 非法操作:index.php
+
+[ 2017-04-16T22:55:52+08:00 ] 127.0.0.1 /coolbox/coolbox/index.php/Home/Index/index.php
+ERR: 非法操作:index.php
+
+[ 2017-04-16T22:55:56+08:00 ] 127.0.0.1 /coolbox/coolbox/index.php/Home/Index/index.php
+ERR: 非法操作:index.php
+
+[ 2017-04-16T22:56:11+08:00 ] 127.0.0.1 /coolbox/coolbox/index.php/Home/Index/index.php
+ERR: 非法操作:index.php
+
+[ 2017-04-16T22:56:29+08:00 ] 127.0.0.1 /coolbox/coolbox/index.php/Home/Index/index.php
+ERR: 非法操作:index.php
+
+[ 2017-04-16T23:02:50+08:00 ] 127.0.0.1 /coolbox/coolbox/index.php/Home/User/__MODULE__/User/center?userid=null
+ERR: 非法操作:__MODULE__
+
+[ 2017-04-16T23:08:34+08:00 ] 127.0.0.1 /coolbox/coolbox/index.php/Home/User/__MODULE__/User/center?userid=null
+ERR: 非法操作:__MODULE__
+
+[ 2017-04-16T23:08:52+08:00 ] 127.0.0.1 /coolbox/coolbox/index.php/Home/User/__MODULE__/Index/index
+ERR: 非法操作:__MODULE__
+
+[ 2017-04-16T23:11:25+08:00 ] 127.0.0.1 /CoolBox/coolbox/index.php/Home/User/action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `f_user` [ RunTime:0.1046s ]
+SQL: SELECT * FROM `f_user` WHERE ( user_name ='admin' )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user_pwd D:\wamp\www\0322\CoolBox\coolbox\Home\Controller\UserController.class.php 第 42 行.
+NOTIC: [8] Undefined index: user_id D:\wamp\www\0322\CoolBox\coolbox\Home\Controller\UserController.class.php 第 47 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-16T23:49:54+08:00 ] 127.0.0.1 /CoolBox/coolbox/index.php/Home/User/action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `f_user` WHERE ( user_name ='admin' )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: user_pwd D:\wamp\www\0322\CoolBox\coolbox\Home\Controller\UserController.class.php 第 42 行.
+NOTIC: [8] Undefined index: user_id D:\wamp\www\0322\CoolBox\coolbox\Home\Controller\UserController.class.php 第 47 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-16T23:59:38+08:00 ] 127.0.0.1 /CoolBox/coolbox/index.php/Home/User/action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `f_user` WHERE ( user_name ='admin' )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: user_pwd D:\wamp\www\0322\CoolBox\coolbox\Home\Controller\UserController.class.php 第 42 行.
+NOTIC: [8] Undefined index: user_id D:\wamp\www\0322\CoolBox\coolbox\Home\Controller\UserController.class.php 第 47 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
